@@ -1,3 +1,7 @@
+import utils.clients
+import utils.http_session
+import utils.transport
+import utils.session
 import asyncio
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 from config import TELEGRAM_BOT_TOKEN, WEBHOOK_ENABLED, WEBHOOK_URL, PORT
@@ -12,6 +16,7 @@ from handlers.admin import broadcast, users_list, restart, shutdown, logs
 from utils.logger import logger
 
 def main():
+    init_db()
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))

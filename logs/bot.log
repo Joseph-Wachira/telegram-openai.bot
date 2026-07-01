@@ -1,0 +1,127 @@
+2026-07-01 23:04:35,399 - telegram_bot - INFO - Starting polling...
+2026-07-01 23:04:43,784 - telegram_bot - ERROR - OpenAI chat error for user 6026371052: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+Traceback (most recent call last):
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 31, in chat_completion
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 32, in <lambda>
+    lambda: client.chat.completions.create(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_utils\_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\resources\chat\completions.py", line 590, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1240, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 921, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1020, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-01 23:04:43,805 - telegram_bot - ERROR - Chat error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-01 23:05:29,548 - telegram_bot - ERROR - OpenAI chat error for user 6026371052: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+Traceback (most recent call last):
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 31, in chat_completion
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 32, in <lambda>
+    lambda: client.chat.completions.create(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_utils\_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\resources\chat\completions.py", line 590, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1240, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 921, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1020, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-01 23:05:29,552 - telegram_bot - ERROR - Chat error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-01 23:05:50,218 - telegram_bot - ERROR - OpenAI chat error for user 6026371052: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+Traceback (most recent call last):
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 31, in chat_completion
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\services\openai_service.py", line 32, in <lambda>
+    lambda: client.chat.completions.create(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_utils\_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\resources\chat\completions.py", line 590, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1240, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 921, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1005, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1053, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\joewa\OneDrive\Desktop\repo\telegram-openai.bot\venv\Lib\site-packages\openai\_base_client.py", line 1020, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-01 23:05:50,220 - telegram_bot - ERROR - Chat error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
