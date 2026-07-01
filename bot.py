@@ -12,6 +12,7 @@ from handlers.admin import broadcast, users_list, restart, shutdown, logs
 from utils.logger import logger
 
 def main():
+    init_db()
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))

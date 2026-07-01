@@ -43,6 +43,7 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"Last seen: {s.get('last_seen')}"
         )
     else:
+        
         text = "No stats yet."
     await update.message.reply_text(text)
 
